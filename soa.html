@@ -35,14 +35,14 @@ var photos_from = "https://graph.facebook.com/kaycee.rubio?access_token=" + acce
 							
 $.getJSON(user_name, function(data)
 							{
-								var uname = "<h2> NAME: </h2>" + data["name"];
-								$("#content").append(uname);
+								var username = "<h2> NAME: </h2>" + data["name"];
+								$("#content").append(username);
 							}
 							);
 
 $.getJSON(interests, function(data)
 							{
-								var interests = "<h2> INTERESTS: N/A </h2>" + data["interests"];
+								var interests = "<h2> INTERESTS: N/A </h2>";
 								$("#content").append(interests);
 							}
 							);
@@ -70,7 +70,7 @@ $.getJSON(age_range, function(data)
 
 $.getJSON(email, function(data)
 							{
-								var email = "<h2> EMAIL: </h2>" + data["email"];
+								var email = "<h2> EMAIL ADDRESS: </h2>" + data["email"];
 								$("#content").append(email);
 							}
 							);
@@ -84,21 +84,21 @@ $.getJSON(birthday, function(data)
 
 $.getJSON(language, function(data)
 							{
-								var language = "<h2> LANGUAGE: N/A </h2>" + data["language"];
+								var language = "<h2> LANGUAGE: N/A </h2>";
 								$("#content").append(language);
 							}
 							);
 
 $.getJSON(religion, function(data)
 							{
-								var religion = "<h2> RELIGION: N/A </h2>" + data["religion"];
+								var religion = "<h2> RELIGION: N/A </h2>";
 								$("#content").append(religion);
 							}
 							);
 
 							$.getJSON(photo_url, function(data)
 							{
-								var picture = "<br><imgsrc=" + data["picture"]["data"]["url"] + "></br>";
+								var picture = "<br> <imgsrc=" + data["picture"]["data"]["url"] + "> </br>";
 
 								$("#content").append(picture);
 							}
@@ -106,7 +106,7 @@ $.getJSON(religion, function(data)
 
 $.getJSON(relationship_status, function(data)
 							{
-								var relationship_status = "<h2> RELATIONSHIP STATUS: N/A </h2>" + data["relationship_status"];
+								var relationship_status = "<h2> RELATIONSHIP STATUS: N/A </h2>";
 								$("#content").append(relationship_status);
 							}
 							);
@@ -114,8 +114,9 @@ $.getJSON(relationship_status, function(data)
 
 					$.getJSON(cover_photo, function(data)
 							{
-								//varcover_photo = "<br>COVER PHOTO: N/A</br>";
-								var cover_photo = "<br><imgsrc=" + data["cover"]["source"]["url"] + "></br>";
+								var cover_header = "<h2> COVER PHOTO: </h2>";
+								var cover_photo = "<br> <imgsrc=" + data["cover"]["source"] + "> </br>";
+								$("#content").append(cover_header);
 								$("#content").append(cover_photo);
 							}
 							);
@@ -165,9 +166,9 @@ $.getJSON(photos, function(data)
 								var photos;
 								var photos_header = "<h2>PHOTOS: </h2>";
 								$("#content").append(photos_header);								
-								for (vari=0; i<data[5]; i++)
+								for (var i=0; i<data[5]; i++)
 								{
-									photos = "<br>" + data["photos"]["data"][i]["picture"] + "</br>";
+									photos = "<br> <img src=" + data["photos"]["data"][i]["picture"] + "> </br>";
 									$("#content").append(photos);
 								}
 							}
@@ -180,7 +181,7 @@ $.getJSON(photos_from, function(data)
 								$("#content").append(photos_from_header);								
 								for (vari=0; i<data[5]; i++)
 								{
-									photos_from = "<br>" + data["photos"]["data"][i]["name"] + "</br>";
+									photos_from = "<br> <img src=" + data["photos"]["data"][i]["name"] + "> </br>";
 									$("#content").append(photos_from);
 								}
 							}
