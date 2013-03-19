@@ -12,184 +12,180 @@
 	<script>
 			$(document).ready(function() 
 			{
-						$("#my_button").click(function()
-						{
-		var access_token = "AAACEdEose0cBANyg462BGIzBduPDo5kOnxuEVZCQug3NXQQCtfo2VN2RsoYLiRmPXTewBySZBFQLEvtFG7ZAgUZCAuRz1osX6nQVE02hSyOwHTutlwH5";
-		var photo_url = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=picture";
-var cover_photo = "https://graph.facebook.com/kaycee.rubio?access_token=" +access_token + "&fields=cover";
-		var gender = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=gender";
-var location = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=location";
-var age_range = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=age_range";
-var email = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=email";
-var birthday = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=birthday";
-var language = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=language";
-var religion = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=religion";
-var interests = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=interests";
-		var user_name = "https://graph.facebook.com/kaycee.rubio";
-		var like_url = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=likes";
-var relationship_status = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=relationship_status";
-var friends_url = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=friends";
-var photos = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=photos.limit(5)";
-var events = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=events";
-var photos_from = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=photos.limit(5).fields(from)”;
+				$("#my_button").click(function()
+				{
+					var access_token = "AAACEdEose0cBANyg462BGIzBduPDo5kOnxuEVZCQug3NXQQCtfo2VN2RsoYLiRmPXTewBySZBFQLEvtFG7ZAgUZCAuRz1osX6nQVE02hSyOwHTutlwH5";
+					var photo_url = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=picture";
+					var cover_photo = "https://graph.facebook.com/kaycee.rubio?access_token=" +access_token + "&fields=cover";
+					var gender = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=gender";
+					var location = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=location";
+					var age_range = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=age_range";
+					var email = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=email";
+					var birthday = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=birthday";
+					var language = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=languages";
+					var religion = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=religion";
+					var interests = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=interests";
+					var user_name = "https://graph.facebook.com/kaycee.rubio";
+					var like_url = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=likes";
+					var relationship_status = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=relationship_status";
+					var friends_url = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=friends";
+					var photos = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=photos.limit(5)";
+					var events = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=events";
+					var photos_from = "https://graph.facebook.com/kaycee.rubio?access_token=" + access_token + "&fields=photos.limit(5).fields(from)”;
 							
-$.getJSON(user_name, function(data)
-							{
-								var username = "<h2> NAME: </h2>" + data["name"];
-								$("#content").append(username);
-							}
-							);
+					$.getJSON(user_name, function(data)
+					{
+						var username = "<h2> NAME: </h2>" + data["name"];
+						$("#content").append(username);
+					}
+					);
 
-$.getJSON(interests, function(data)
-							{
-								var interests = "<h2> INTERESTS: N/A </h2>";
-								$("#content").append(interests);
-							}
-							);
+					$.getJSON(interests, function(data)
+					{
+						var interests = "<h2> INTERESTS: N/A </h2>";
+						$("#content").append(interests);
+					}
+					);
 
-$.getJSON(gender, function(data)
-							{
-								var gender = "<h2> GENDER: </h2>" + data["gender"];
-								$("#content").append(gender);
-							}
-							);
+					$.getJSON(gender, function(data)
+					{
+						var gender = "<h2> GENDER: </h2>" + data["gender"];
+						$("#content").append(gender);
+					}
+					);
 
-$.getJSON(location, function(data)
-							{
-								var location = "<h2> LOCATION: </h2>" + data["location"];
-								$("#content").append(location);
-							}
-							);
+					$.getJSON(location, function(data)
+					{
+						var location = "<h2> LOCATION: </h2>" + data["location"];
+						$("#content").append(location);
+					}
+					);
 
-$.getJSON(age_range, function(data)
-							{
-								var age = "<h2> AGE: </h2>" + data["age_range"][“max”];
-								$("#content").append(age);
-							}
-							);
+					$.getJSON(age_range, function(data)
+					{
+						var age = "<h2> AGE: </h2>" + data["age_range"][“max”];
+						$("#content").append(age);
+					}
+					);
 
-$.getJSON(email, function(data)
-							{
-								var email = "<h2> EMAIL ADDRESS: </h2>" + data["email"];
-								$("#content").append(email);
-							}
-							);
+					$.getJSON(email, function(data)
+					{
+						var email = "<h2> EMAIL ADDRESS: </h2>" + data["email"];
+						$("#content").append(email);
+					}
+					);
 
-$.getJSON(birthday, function(data)
-							{
-								var birthday = "<h2> BIRTHDAY: </h2>" + data["birthday"];
-								$("#content").append(birthday);
-							}
-							);
+					$.getJSON(birthday, function(data)
+					{
+						var birthday = "<h2> BIRTHDAY: </h2>" + data["birthday"];
+						$("#content").append(birthday);
+					}
+					);
 
-$.getJSON(language, function(data)
-							{
-								var language = "<h2> LANGUAGE: N/A </h2>";
-								$("#content").append(language);
-							}
-							);
+					$.getJSON(language, function(data)
+					{
+						var language = "<h2> LANGUAGE: N/A </h2>";
+						$("#content").append(language);
+					}
+					);
 
-$.getJSON(religion, function(data)
-							{
-								var religion = "<h2> RELIGION: N/A </h2>";
-								$("#content").append(religion);
-							}
-							);
+					$.getJSON(religion, function(data)
+					{
+						var religion = "<h2> RELIGION: N/A </h2>";
+						$("#content").append(religion);
+					}
+					);
 
-							$.getJSON(photo_url, function(data)
-							{
-								var picture = "<br> <imgsrc=" + data["picture"]["data"]["url"] + "> </br>";
+					$.getJSON(photo_url, function(data)
+					{
+						var picture = "<br> <imgsrc=" + data["picture"]["data"]["url"] + "> </br>";
+						$("#content").append(picture);
+					}
+					);
 
-								$("#content").append(picture);
-							}
-							);
-
-$.getJSON(relationship_status, function(data)
-							{
-								var relationship_status = "<h2> RELATIONSHIP STATUS: N/A </h2>";
-								$("#content").append(relationship_status);
-							}
-							);
-
+					$.getJSON(relationship_status, function(data)
+					{
+						var relationship_status = "<h2> RELATIONSHIP STATUS: N/A </h2>";
+						$("#content").append(relationship_status);
+					}
+					);
 
 					$.getJSON(cover_photo, function(data)
-							{
-								var cover_header = "<h2> COVER PHOTO: </h2>";
-								var cover_photo = "<br> <imgsrc=" + data["cover"]["source"] + "> </br>";
-								$("#content").append(cover_header);
-								$("#content").append(cover_photo);
-							}
-							);
+					{
+						var cover_header = "<h2> COVER PHOTO: </h2>";
+						var cover_photo = "<br> <imgsrc=" + data["cover"]["source"] + "> </br>";
+						$("#content").append(cover_header);
+						$("#content").append(cover_photo);
+					}
+					);
 
-							$.getJSON(like_url, function(data)
-							{
-								var likes;
-								var likes_header = "<h2> LIKES: </h2>";
-								$("#content").append(likes_header);
-								for (vari=0; i<data["likes"]["data"].length; i++)
-								{
-									likes = "<br>" + data["likes"]["data"][i]["name"] + "</br>";
-									$("#content").append(likes);
-								}								
-							}
-							);
+					$.getJSON(like_url, function(data)
+					{
+						var likes;
+						var likes_header = "<h2> LIKES: </h2>";
+						$("#content").append(likes_header);
+						for (vari=0; i<data["likes"]["data"].length; i++)
+						{
+							likes = "<br>" + data["likes"]["data"][i]["name"] + "</br>";
+							$("#content").append(likes);
+						}								
+					}
+					);
 							
-							$.getJSON(friends_url, function(data)
-							{
-								var friends;
-								var friends_header = "<h2> FRIENDS: </h2>";
-								$("#content").append(friends_header);								
-								for (vari=0; i<data["friends"]["data"].length; i++)
-								{
-									friends = "<br>" + data["friends"]["data"][i]["name"] + "</br>";
-									$("#content").append(friends);
-								}
-							}
-							);
-	
-							$.getJSON(events, function(data)
-							{
-								var events;
-								var events_header = "<h2> LATEST EVENTS ATTENDED: </h2>";
-								$("#content").append(events_header);								
-								for (vari=0; i<data["events"]["data"].length; i++)
-								{
-									events = "<br>" + data["events"]["data"][i]["name"] + "</br>";
-									$("#content").append(events);
-								}
-							}
-							);
-
-
-$.getJSON(photos, function(data)
-							{
-								var photos;
-								var photos_header = "<h2>PHOTOS: </h2>";
-								$("#content").append(photos_header);								
-								for (var i=0; i<data[5]; i++)
-								{
-									photos = "<br> <img src=" + data["photos"]["data"][i]["picture"] + "> </br>";
-									$("#content").append(photos);
-								}
-							}
-							);
-
-$.getJSON(photos_from, function(data)
-							{
-								var photos_from;
-								var photos_from_header = "<h2>Person who posted the PHOTOS: </h2>";
-								$("#content").append(photos_from_header);								
-								for (vari=0; i<data[5]; i++)
-								{
-									photos_from = "<br> <img src=" + data["photos"]["data"][i]["name"] + "> </br>";
-									$("#content").append(photos_from);
-								}
-							}
-							);
-
-
+					$.getJSON(friends_url, function(data)
+					{
+						var friends;
+						var friends_header = "<h2> FRIENDS: </h2>";
+						$("#content").append(friends_header);								
+						for (vari=0; i<data["friends"]["data"].length; i++)
+						{
+							friends = "<br>" + data["friends"]["data"][i]["name"] + "</br>";
+							$("#content").append(friends);
 						}
-						);
+					}
+					);
+	
+					$.getJSON(events, function(data)
+					{
+						var events;
+						var events_header = "<h2> LATEST EVENTS ATTENDED: </h2>";
+						$("#content").append(events_header);								
+						for (vari=0; i<data["events"]["data"].length; i++)
+						{
+							events = "<br>" + data["events"]["data"][i]["name"] + "</br>";
+							$("#content").append(events);
+						}
+					}
+					);
+
+					$.getJSON(photos, function(data)
+					{
+						var photos;
+						var photos_header = "<h2>PHOTOS: </h2>";
+						$("#content").append(photos_header);								
+						for (var i=0; i<data[5]; i++)
+						{
+							photos = "<br> <img src=" + data["photos"]["data"][i]["picture"] + "> </br>";
+							$("#content").append(photos);
+						}
+					}
+					);
+
+					$.getJSON(photos_from, function(data)
+					{
+						var photos_from;
+						var photos_from_header = "<h2>Person who posted the PHOTOS: </h2>";
+						$("#content").append(photos_from_header);								
+						for (vari=0; i<data[5]; i++)
+						{
+							photos_from = "<br> <img src=" + data["photos"]["data"][i]["name"] + "> </br>";
+							$("#content").append(photos_from);
+						}
+					}
+					);
+
+				}
+				);
 			}
 			);
 	</script>
