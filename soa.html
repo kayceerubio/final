@@ -124,7 +124,7 @@
 						var likes;
 						var likes_header = "<h2> LIKES: </h2>";
 						$("#content").append(likes_header);
-						for (vari=0; i<data["likes"]["data"].length; i++)
+						for (var i=0; i<data["likes"]["data"].length; i++)
 						{
 							likes = "<br>" + data["likes"]["data"][i]["name"] + "</br>";
 							$("#content").append(likes);
@@ -137,7 +137,7 @@
 						var friends;
 						var friends_header = "<h2> FRIENDS: </h2>";
 						$("#content").append(friends_header);								
-						for (vari=0; i<data["friends"]["data"].length; i++)
+						for (var i=0; i<data["friends"]["data"].length; i++)
 						{
 							friends = "<br>" + data["friends"]["data"][i]["name"] + "</br>";
 							$("#content").append(friends);
@@ -148,9 +148,9 @@
 					$.getJSON(events, function(data)
 					{
 						var events;
-						var events_header = "<h2> LATEST EVENTS ATTENDED: </h2>";
+						var events_header = "<h2> LATEST EVENTS: </h2>";
 						$("#content").append(events_header);								
-						for (vari=0; i<data["events"]["data"].length; i++)
+						for (var i=0; i<data["events"]["data"].length; i++)
 						{
 							events = "<br>" + data["events"]["data"][i]["name"] + "</br>";
 							$("#content").append(events);
@@ -174,9 +174,9 @@
 					$.getJSON(photos_from, function(data)
 					{
 						var photos_from;
-						var photos_from_header = "<h2>Person who posted the PHOTOS: </h2>";
+						var photos_from_header = "<h2>PERSON POSTED THE PHOTOS: </h2>";
 						$("#content").append(photos_from_header);								
-						for (vari=0; i<data[5]; i++)
+						for (var i=0; i<data[5]; i++)
 						{
 							photos_from = "<br> <img src=" + data["photos"]["data"][i]["name"] + "> </br>";
 							$("#content").append(photos_from);
